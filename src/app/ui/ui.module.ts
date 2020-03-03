@@ -13,7 +13,7 @@ import { UiComponent } from './components/ui/ui.component';
     CommonModule
   ],
   exports : [
-    UiComponent
+    UiComponent,NavComponent, FooterComponent, HeaderComponent
   ]
 })
 export class UiModule { }
