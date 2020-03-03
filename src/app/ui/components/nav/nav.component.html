@@ -1,1 +1,11 @@
-<p>nav works!</p>
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a [routerLink]="['/login']" [routerLinkActive]="['active']" class="nav-link">Login</a>
+  </li>
+  <li class="nav-item">
+    <a [routerLink]="['/prestations']" [routerLinkActive]="['active']" class="nav-link">Prestation</a>
+  </li>
+  <li class="nav-item">
+    <a [routerLink]="['/clients']" [routerLinkActive]="['active']" class="nav-link">Clients</a>
+  </li>
+</ul>
