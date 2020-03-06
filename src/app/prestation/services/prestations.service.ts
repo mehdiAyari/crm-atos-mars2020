@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Prestation } from 'src/app/shared/models/prestation';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
@@ -12,7 +12,7 @@ import { State } from 'src/app/shared/enums/state.enum';
 export class PrestationsService {
 
   private pCollection$ : Observable<Prestation[]>;
-  itemDetails$ = new Subject<Prestation>();
+  itemDetails$ = new BehaviorSubject<Prestation>(null);
 
   constructor(private http: HttpClient) {
     this.collection = this.http.get<Prestation[]>(`${environment.urlApi}prestations`).pipe(
