@@ -8,6 +8,7 @@ import { TemplateModule } from '../template/template.module';
 import { ButtonComponent } from './component/button/button.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -20,12 +21,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     TableauDarkComponent,
     TemplateModule,
     ButtonComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ]
 })
 export class SharedModule { }

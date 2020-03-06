@@ -1,0 +1,6 @@
+<app-template-b [title]="title" [subtitle]="subtitle">
+
+  <app-form-prestation *ngIf="item$ | async as item" (nItem)="updateItem($event)" [item]="item" ></app-form-prestation>
+
+</app-template-b>
+

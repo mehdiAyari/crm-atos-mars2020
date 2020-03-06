@@ -3,42 +3,12 @@
     {
       "id": 1,
       "typePresta": "Coaching",
-      "client": "Modis",
+      "client": "Modisss",
       "tjmHt": 1200,
-      "nbJours": 10,
+      "nbJours": 16,
       "tva": 20,
-      "state": "annulé",
+      "state": "Option",
       "comment": "Merci Modis pour les 1.2k jour"
-    },
-    {
-      "id": 2,
-      "typePresta": "Coaching",
-      "client": "Capgemini",
-      "tjmHt": 1200,
-      "nbJours": 20,
-      "tva": 20,
-      "state": "Option",
-      "comment": "Merci Capgemini pour les 1.2k jour"
-    },
-    {
-      "typePresta": "typePresta1",
-      "client": "mehdi",
-      "tjmHt": 1200,
-      "nbJours": 4,
-      "tva": 20,
-      "state": "Option",
-      "comment": "mehdiii",
-      "id": 3
-    },
-    {
-      "typePresta": null,
-      "client": null,
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Option",
-      "comment": null,
-      "id": 4
     }
   ],
   "clients": [
