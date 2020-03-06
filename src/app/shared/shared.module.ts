@@ -9,11 +9,12 @@ import { ButtonComponent } from './component/button/button.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavLineComponent } from './component/nav-line/nav-line.component';
 
 
 
 @NgModule({
-  declarations: [TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, ButtonComponent],
+  declarations: [TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, ButtonComponent, NavLineComponent],
   exports : [
     TotalPipe,
     StateDirective,
@@ -22,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TemplateModule,
     ButtonComponent,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule ,
+    NavLineComponent
   ],
   imports: [
     CommonModule,

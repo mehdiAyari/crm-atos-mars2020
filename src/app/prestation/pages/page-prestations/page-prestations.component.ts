@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { State } from 'src/app/shared/enums/state.enum';
 import { TransferState } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import {faTrashAlt} from  '@fortawesome/free-solid-svg-icons'
+import {faTrashAlt , faEdit} from  '@fortawesome/free-solid-svg-icons'
 
 
 @Component({
@@ -31,10 +31,18 @@ export class PagePrestationsComponent implements OnInit {
   public states = Object.values(State) ;
 
   public faTrashAlt = faTrashAlt ;
+  public faEdit= faEdit ;
+
+  public listLinks : {route : string , label:string}[] ;
 
   constructor(private ps : PrestationsService , private acRoute :ActivatedRoute , private router : Router) { }
 
   ngOnInit(): void {
+
+    this.listLinks = [
+      {route : "details" , label:'details'},
+      {route : "comments" , label:'commentaires'}
+    ];
 
     this.ps.collection.subscribe((datas) => {
       this.collection$.next(datas) ;
@@ -80,4 +88,7 @@ export class PagePrestationsComponent implements OnInit {
     this.router.navigate(['prestations/edit',item.id]);
   }
 
+  public details(item : Prestation){
+    this.ps.setDetails(item);
+  }
 }
