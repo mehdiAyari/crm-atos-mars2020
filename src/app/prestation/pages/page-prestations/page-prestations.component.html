@@ -1,12 +1,7 @@
-<div class="table-responsive">
+<app-template-b [title]="title" [subtitle]="subtitle">
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th *ngFor= "let head of thElements" scope="col">{{head}}</th>
-      </tr>
-    </thead>
-    <tbody>
+    <app-tableau-light [headers]="thElements">
+
       <tr *ngFor="let item of collection$ | async as collection">
         <td>{{item.typePresta}}</td>
         <td>{{item.client}}</td>
@@ -14,10 +9,16 @@
         <td>{{item.tjmHt | currency: 'EUR'}}</td>
         <td>{{item  | total | currency: 'EUR'}}</td>
         <td>{{item | total :'TTC' | currency: 'EUR' }}</td>
-        <td>{{item.state}}</td>
+        <td [appState]="item.state">
+          <select (change)="chnageState(item , $event)">
+            <option *ngFor="let state of states" [selected]="state === item.state" [value]="state">{{state}}</option>
+          </select>
+        </td>
+
       </tr>
 
-    </tbody>
-  </table>
+    </app-tableau-light>
 
-</div>
+    <app-button [label]="label" [route]="route"></app-button>
+    <app-button [label]="label" [externalLink]="externalLink"></app-button>
+</app-template-b>

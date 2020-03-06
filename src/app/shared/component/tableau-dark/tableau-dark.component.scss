@@ -1,0 +1,22 @@
+@import 'theme';
+
+#table-dark {
+  .state-option {
+    background: $color1;
+  }
+ .state-annule {
+    background: $color-error;
+  }
+   .state-confirme {
+    background: $color-success;
+  }
+}
+
+
+app-template-a #table-dark .state-option {
+  background : $color2 ;
+}
+
+app-template-b #table-dark .state-option {
+  background : $color1 ;
+}
